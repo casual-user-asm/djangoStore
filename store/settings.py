@@ -106,8 +106,8 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "store_db",
-        "USER": "store_admin",
-        "PASSWORD": "admin",
+        "USER": "****",
+        "PASSWORD": "****",
         "HOST": "localhost",
         "PORT": "5432",
     }
@@ -190,6 +190,6 @@ SOCIALACCOUNT_PROVIDERS = {
 
 # Stripe
 
-STRIPE_PUBLIC_KEY = 'pk_test_51NpC1iFe8qvv3OmnnPrQxWfynpTckGbCioAWD2rC2aJXoZAyJyiqxHjApxhfbrhvjWa1OGLjfnqueMgmrK5pFfOi005tpuQvei'
-STRIPE_SECRET_KEY = 'sk_test_51NpC1iFe8qvv3OmnBiNjEmHpzhcnvxLdlnMXDLMk5FpfizrDlgEk5bhPNDXfuGmnN6nVq3YtnmB5gXNnCGM0ZCef00Y5sIo2Tp'
-STRIPE_WEBHOOK_SECRET = 'whsec_71e6eee739576304be8e33e109ac5c97f8bfb6468beca68d62ef92c2d8e80bc1'
+STRIPE_PUBLIC_KEY = '****'
+STRIPE_SECRET_KEY = '****'
+STRIPE_WEBHOOK_SECRET = '****'
