@@ -27,7 +27,7 @@ class ProductsListViewTestCase(TestCase):
         response = self.client.get(path)
 
         self._common_tests(response)
-        self.assertEqual(list(response.context_data['object_list']), list(self.product[:3]))
+        self.assertEqual(list(response.context_data['object_list']), list(self.product[:6]))
 
     def test_category(self):
         category = Product.objects.first()

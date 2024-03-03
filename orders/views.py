@@ -1,35 +1,30 @@
+from http import HTTPStatus
 import stripe
 from django.conf import settings
-from django.views.generic.edit import CreateView
-from orders.forms import OrderForm
-from django.urls import reverse_lazy, reverse
-from common.view import TitleMixin
-from django.views.generic.base import TemplateView
 from django.http import HttpResponse, HttpResponseRedirect
-from http import HTTPStatus
+from django.urls import reverse, reverse_lazy
 from django.views.decorators.csrf import csrf_exempt
-from products.models import Basket
-from orders.models import Order
-from django.views.generic.list import ListView
+from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
-
+from django.views.generic.edit import CreateView
+from django.views.generic.list import ListView
+from orders.forms import OrderForm
+from orders.models import Order
+from products.models import Basket
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
-class SuccessTemplateView(TitleMixin, TemplateView):
+class SuccessTemplateView(TemplateView):
     template_name = 'orders/success.html'
-    title = 'Success order'
 
 
-class CanceledTemplateView(TitleMixin, TemplateView):
+class CanceledTemplateView(TemplateView):
     template_name = 'orders/cancel.html'
-    title = 'Cancel order'
 
 
-class OrderListView(TitleMixin, ListView):
+class OrderListView(ListView):
     template_name = 'orders/orders.html'
-    title = 'Orders list'
     queryset = Order.objects.all()
     ordering = ('-created')
 
@@ -44,15 +39,14 @@ class OrderDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(OrderDetailView, self).get_context_data(**kwargs)
-        context['title'] = f'Order #{self.object.id}'
+        context['title'] = f'Store - Order #{self.object.id}'
         return context
 
 
-class OrderCreatedView(TitleMixin, CreateView):
+class OrderCreatedView(CreateView):
     template_name = 'orders/order-create.html'
     form_class = OrderForm
     success_url = reverse_lazy('orders:order_create')
-    title = 'Create Order'
 
     def post(self, request, *args, **kwargs):
         super(OrderCreatedView, self).post(request, *args, **kwargs)
@@ -72,14 +66,14 @@ class OrderCreatedView(TitleMixin, CreateView):
 
 
 @csrf_exempt
-def my_webhook_view(request):
+def stripe_webhook_view(request):
     payload = request.body
     sig_header = request.META['HTTP_STRIPE_SIGNATURE']
     event = None
 
     try:
         event = stripe.Webhook.construct_event(
-          payload, sig_header, settings.STRIPE_WEBHOOK_SECRET
+            payload, sig_header, settings.STRIPE_WEBHOOK_SECRET
         )
     except ValueError:
         # Invalid payload
@@ -90,9 +84,7 @@ def my_webhook_view(request):
 
     # Handle the checkout.session.completed event
     if event['type'] == 'checkout.session.completed':
-        # Retrieve the session. If you require line items in the response, you may include them by expanding line_items.
         session = event['data']['object']
-        # stripe.checkout.Session.retrieve(event['data']['object']['id'],expand=['line_items'],)
 
         # Fulfill the purchase...
         fulfill_order(session)

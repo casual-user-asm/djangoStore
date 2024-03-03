@@ -1,0 +1,158 @@
+[
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "name": "Men's Premium Organic T-shirt",
+      "descriprtion": "100% Organic ring-spun Combed Cotton",
+      "price": "433.00",
+      "image": "products_images/Men's-Premium-Organic-T-shirt.png",
+      "quantity": 3,
+      "category": 6,
+      "brand":"Nike"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "name": "Unisex Premium Sweatshirt",
+      "descriprtion": "80% Combed Cotton 20% Polyester Brushed 3-ply 9oz \/ 320g",
+      "price": "111.80",
+      "image": "products_images/Unisex-Premium-Sweatshirt.png",
+      "quantity": 3,
+      "category": 7,
+      "brand":"Louis Vuitton"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "name": "Unisex Premium Hoodie",
+      "descriprtion": "Brushed fleece - soft touch, 85% Organic ring-spun Combed Cotton 15% Polyester",
+      "price": "194.20",
+      "image": "products_images/Unisex-Premium-Hoodie.png",
+      "quantity": 3,
+      "category": 8,
+      "brand":"Chanel"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "name": "Premium Scoop Neck T-shirt",
+      "descriprtion": "100% Organic ring-spun Combed Cotton",
+      "price": "41.70",
+      "image": "products_images/Premium-Scoop-Neck-T-shirt.png",
+      "quantity": 3,
+      "category": 9,
+      "brand":"Gucci"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "name": "Unisex Premium Jersey T-shirt",
+      "descriprtion": "100% Combed and ringspun cotton. 30 single. Athletic Heather: 90% Combed and ringspun cotton, 10% Polyester. Dark Heather Grey: 52% Combed and ringspun cotton, 48% Polyester",
+      "price": "26.80",
+      "image": "products_images/Unisex-Premium-Jersey-T-shirt.png",
+      "quantity": 3,
+      "category": 6,
+      "brand":"Louis Vuitton"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+      "name": "Unisex Super-Premium Sweatshirt",
+      "descriprtion": "Terry - unbrushed fleece - soft touch, 85% Organic ring-spun Combed Cotton, 15% Polyester",
+      "price": "157.50",
+      "image": "products_images/Unisex-Super-Premium-Sweatshirt.png",
+      "quantity": 3,
+      "category": 7,
+      "brand":"Chanel"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+      "name": "Unisex Standard College Hoodie",
+      "descriprtion": "80% Cotton, 20% Polyester",
+      "price": "89.80",
+      "image": "products_images/Unisex-Standard-College-Hoodie.png",
+      "quantity": 3,
+      "category": 8,
+      "brand":"Gucci"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+      "name": "Ladies Premium Favourite T-shirt",
+      "descriprtion": "100% Combed and ringspun cotton",
+      "price": "32.80",
+      "image": "products_images/Ladies-Premium-Favourite-T-shirt.png",
+      "quantity": 3,
+      "category": 9,
+      "brand": "Nike"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+      "name": "Unisex Premium Fine Jersey T-shirt",
+      "descriprtion": "100% Cotton",
+      "price": "7.00",
+      "image": "products_images/Unisex-Premium-Fine-Jersey-T-shirt.png",
+      "quantity": 3,
+      "category": 6,
+      "brand": "Louis Vuitton"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+      "name": "Unisex Standard Sweatshirt",
+      "descriprtion": "80% Cotton, Belcoro\u00ae yarn, 20% Polyester",
+      "price": "76.00",
+      "image": "products_images/Unisex-Standard-Sweatshirt.png",
+      "quantity": 3,
+      "category": 7,
+      "brand": "Chanel"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+      "name": "Men's Lightweight Zip Hoodie",
+      "descriprtion": "80% Combed Cotton 20% Polyester Brushed 3-ply 9oz \/ 320g",
+      "price": "164.30",
+      "image": "products_images/Men's-Lightweight-Zip-Hoodie.png",
+      "quantity": 3,
+      "category": 8,
+      "brand": "Gucci"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+      "name": "Women's Premium T-shirt",
+      "descriprtion": "100% Organic ring-spun Combed Cotton",
+      "price": "43.30",
+      "image": "products_images/Women's-Premium-T-shirt.png",
+      "quantity": 3,
+      "category": 9,
+      "brand": "Nike"
+    }
+  }
+]

@@ -17,9 +17,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
-
+from orders.views import stripe_webhook_view
 from products.views import IndexView
-from orders.views import my_webhook_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,7 +27,7 @@ urlpatterns = [
     path('users/', include('users.urls', namespace='users')),
     path('accounts/', include('allauth.urls')),
     path('orders/', include('orders.urls', namespace='orders')),
-    path('webhook/stripe/', my_webhook_view, name='stripe_webhook'),
+    path('webhook/stripe/', stripe_webhook_view, name='stripe_webhook'),
 
 ]
 
